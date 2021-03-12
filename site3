@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculando áreas</title>
+</head>
+<body background="fundoverde.jpg">
+<font face="Courier New" color="#3c0e78">
+<center>
+	<h1> calculando áreas</h1>
+    <h2> área da circunferência: A=π.r<sup>2</sup> </h2> 
+    <h5>*π foi considerado com 3.14</h5>
+    <img src="circulo.jpeg" align="center" border="12px"><br><br>
+    <form NAME="calculadora">
+Valor do raio:<input type="text" name="c1"> <p>
+Resultado: <input type="text" name="c2"> <p>
+<input type="button" value="Calcular" onClick="AreaC()">
+</form>
+
+<script LANGUAGE="JavaScript">
+
+var raio;
+var resultado;
+
+function AreaC() {
+	raio = document.calculadora.c1.value;
+    resultado = 3.14 * parseFloat(raio) * parseFloat(raio);
+
+    document.calculadora.c2.value = 'A área é igual a ' + resultado;
+
+}
+</script>
+<hr width="80%" align="center" size="5" color="white">
+<h3>área do quadrado: A=L<sup>2</sup></h3>
+<img src="quadrado.png" align="center" border="12px"><br><br>
+<form NAME="calculadora2">
+Valor do lado:<input type="text" name="ca1"> <p>
+Resultado: <input type="text" name="ca2"> <p>
+<input type="button" value="Calcular" onClick="AreaQ()">
+</form>
+
+<script LANGUAGE="JavaScript">
+
+var lado;
+var resultado2;
+
+function AreaQ() {
+    lado = document.calculadora2.ca1.value;
+    resultado2 = parseFloat(lado) * parseFloat(lado);
+
+    document.calculadora2.ca2.value = 'A área é igual a ' + resultado2;
+
+}
+</script>
+
+<hr width="80%" align="center" size="5" color="white">
+<h4>área do triângulo: B.h.&#189;</h4>
+<img src="triangulo.png" align="center" border="12px"><br><br>
+<form NAME="calculadora3">
+valor da base:<input type="text" name="cam1"> <p>
+Valor da altura:<input type="text" name="cam2"> <p>
+Resultado: <input type="text" name="cam3"> <p>
+<input type="button" value="Calcular" onClick="AreaT()">
+</form>
+
+<script LANGUAGE="JavaScript">
+
+var base;
+var altura;
+var resultado3;
+
+function AreaT() {
+    base = document.calculadora3.cam1.value;
+    altura = document.calculadora3.cam2.value;
+    resultado3 = parseFloat(base) * parseFloat(altura)/2;
+
+    document.calculadora3.cam3.value = 'A área é igual a ' + resultado3;
+}
+</script>
+</font>
+</body>
+</center>
+</html>
